@@ -6,42 +6,47 @@
   --gris-claro: #ebebeb;
   --verde: #39b54a;
 }
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
+  background-color: var(--gris-claro);
 }
 
 header {
   background-color: var(--amarillo);
+  padding: 10px;
 }
 
-header #logo {
-  padding: 20px;
-  width: 200px;
-  margin: 20px 0;
+header div.logo {
+  width: 50%;
+  padding: 10px;
 }
-header p {
+
+header .top-header p {
   text-align: center;
-  font-size: 16px;
   margin-left: 20px;
 }
+header .top-header .form {
+  margin: 10px 0;
+}
 
-header input#search {
-  display: block;
+header .top-header .form input#search {
   margin-bottom: 5px;
-  margin-left: 20px;
-}
-
-header button {
-  margin-left: 20px;
 }
 
 header nav {
+  font-size: 12px;
   margin-left: 0px;
 }
 
 header nav ul {
   padding-left: 0;
   list-style: none;
+  display: none;
 }
 header nav ul li a {
   color: #000;
@@ -50,7 +55,7 @@ header nav ul li a {
 
 header .burger-menu {
   text-align: center;
-  padding-bottom: 30px;
+  padding: 20px 0;
 }
 header .burger-menu button {
   color: #fff;
@@ -60,26 +65,65 @@ header .burger-menu button {
   background-color: var(--celeste);
 }
 
-main {
-  background-color: var(--gris-claro);
-  padding: 5px 0;
+section.banner img {
+  width: 100%;
 }
 
-h4 {
+main {
+  text-align: center;
+  width: 90%;
+  padding: 10px 0;
+}
+
+main section .products article {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px;
+  text-align: left;
+}
+
+main section .products article img {
+  width: 100%;
+}
+
+main section .products article i,
+.descuentos {
+  color: #39b54a;
+}
+
+main section .products article .main-article {
+  border-top: 1px solid #ebebeb;
+  margin: 15px;
+  padding: 10px 0;
+}
+
+h3 {
   font-size: 24px;
 }
-
-p.precios {
+p {
+  font-size: 12px;
+}
+.precios {
   font-size: 18px;
 }
 
-p.descuentos,
-p.descripciones {
+.descuentos,
+.descripciones {
   font-size: 16px;
 }
 
-p {
-  font-size: 12px;
+.descripciones {
+  display: none;
+}
+
+h3,
+.descripciones {
+  color: #666;
+}
+
+footer {
+  background-color: #fff;
+  padding: 20px 0;
 }
 
 footer div {
@@ -105,4 +149,22 @@ footer p.title {
 
 footer p.footer-descripcion {
   margin-top: 4px;
+}
+
+@media (min-width: 361px) {
+  header nav ul {
+    display: block;
+  }
+  main section .products article .main-article .descripciones {
+    display: block;
+  }
+  main section .products article {
+    box-shadow: 0 0 15px rgba(100, 100, 100, 0.424);
+  }
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
 }

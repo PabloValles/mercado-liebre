@@ -126,9 +126,13 @@ footer {
   padding: 20px 0;
 }
 
+footer {
+  padding: 2em 1em;
+}
+
 footer div {
   text-align: center;
-  padding: 0 60px;
+  padding: 0 50px;
   margin-bottom: 30px;
 }
 

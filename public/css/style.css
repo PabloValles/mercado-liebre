@@ -16,9 +16,15 @@ body {
   background-color: var(--gris-claro);
 }
 
+h3 {
+  font-size: 24px;
+}
+p {
+  font-size: 12px;
+}
+
 header {
   background-color: var(--amarillo);
-  padding: 10px;
 }
 
 header div.logo {
@@ -26,18 +32,30 @@ header div.logo {
   padding: 10px;
 }
 
+div.top-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
 header .top-header p {
   text-align: center;
-  margin-left: 20px;
+  margin-left: 10px;
+  width: 100%;
 }
 header .top-header .form {
   width: 50%;
-  margin: 10px 0;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2px;
+  font-size: 11px;
 }
-
-header .top-header .form input#search {
-  margin-bottom: 5px;
+header .top-header .form input {
+  width: 110px;
+  padding: 4px;
+  border: none;
+  border-radius: 3px;
 }
 
 header nav {
@@ -72,41 +90,36 @@ section.banner img {
 }
 
 main {
-  text-align: center;
   width: 90%;
   margin: 0 auto;
 }
 
-main section .products article {
-  background-color: #fff;
-  padding: 15px;
-  margin: 1rem;
-  text-align: left;
+main section h3 {
+  margin: 20px 0px;
 }
 
-main section .products article img {
+main section article {
+  background-color: #fff;
+  margin: 10px 0px;
+}
+
+main section article img {
   width: 100%;
 }
 
-main section .products article i,
+main section article i,
 .descuentos {
   color: #39b54a;
 }
 
 main section .products article .main-article {
-  border-top: 1px solid #ebebeb;
-  margin: 15px;
-  padding: 10px 0;
-  position: relative;
-}
-main section .products article .main-article .main-article-precios {
-  padding: 1rem 0;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-}
-
-main section .products article .main-article .main-article-precios p {
-  margin-right: 0.5rem;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+  padding: 15px;
 }
 
 main section article i {
@@ -123,23 +136,21 @@ main section article i {
   top: -15px;
 }
 
-h3 {
-  font-size: 24px;
-}
-p {
-  font-size: 12px;
-}
 .precios {
   font-size: 18px;
+  width: 30%;
 }
 
-.descuentos,
-.descripciones {
+.descuentos {
+  width: 70%;
   font-size: 16px;
 }
 
 .descripciones {
+  font-size: 16px;
   display: none;
+  display: none;
+  margin-top: 20px;
 }
 
 h3,
@@ -149,11 +160,8 @@ h3,
 
 footer {
   background-color: #fff;
-  padding: 20px 0;
-}
-
-footer {
-  padding: 2em 1em;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 footer div {
@@ -186,25 +194,29 @@ footer p.footer-descripcion {
     box-shadow: 0 0 15px rgba(100, 100, 100, 0.424);
   }
 
-  header div.logo {
-    width: 35%;
-    padding: 10px;
-  }
-
-  header .top-header {
+  main section div.products {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    flex-flow: row wrap;
   }
 
-  header .top-header .form,
-  .logo {
-    flex-basis: 35%;
+  main section div.products article {
+    width: 45%;
   }
 
-  header .top-header p {
-    flex-basis: 100%;
+  main section article .descripciones {
+    display: block;
+  }
+
+  header .top-header .form input {
+    width: auto;
+  }
+
+  .precios {
+    width: 60%;
+  }
+  .descuentos {
+    width: 40%;
   }
 }
 
@@ -212,71 +224,34 @@ footer p.footer-descripcion {
   .burger-menu {
     display: none;
   }
-  header nav {
-    display: flex;
-    justify-content: space-between;
-  }
-  header nav ul {
-    display: flex;
-    gap: 1rem;
-  }
-  main section .products article .main-article .descripciones {
-    display: block;
-  }
-  header div.logo img {
-    width: 80%;
-    padding: 10px;
-  }
+
+  header nav,
   header .top-header {
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
   }
-  header .top-header .form,
-  .logo {
-    flex-basis: auto;
+  header nav ul {
+    display: flex;
+    gap: 1rem;
   }
 
   header .top-header p {
-    flex-basis: auto;
+    text-align: right;
   }
 
-  main {
-    overflow: hidden;
-  }
-  main section .products {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  main section .products article {
-    flex: 0 0 45%;
+  main section div.products article {
+    width: 22%;
   }
 }
 
 @media (min-width: 992px) {
-  main section {
-    text-align: left;
-  }
-  main section .products {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  main section .products article {
-    margin: 1.5rem 0;
-    flex: 0 0 21%;
-  }
 }
 
 @media (min-width: 1200px) {
-  main,
-  header,
-  footer,
-  .banner {
+  body {
     max-width: 1200px;
     margin: auto;
   }

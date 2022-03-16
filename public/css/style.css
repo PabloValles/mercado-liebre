@@ -31,6 +31,7 @@ header .top-header p {
   margin-left: 20px;
 }
 header .top-header .form {
+  width: 50%;
   margin: 10px 0;
   display: flex;
 }
@@ -72,8 +73,8 @@ section.banner img {
 
 main {
   text-align: center;
-  width: 100%;
-  padding: 10px 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 main section .products article {
@@ -199,7 +200,7 @@ footer p.footer-descripcion {
 
   header .top-header .form,
   .logo {
-    flex-basis: 45%;
+    flex-basis: 35%;
   }
 
   header .top-header p {
@@ -272,8 +273,10 @@ footer p.footer-descripcion {
 }
 
 @media (min-width: 1200px) {
-  main header .top-header,
-  nav {
+  main,
+  header,
+  footer,
+  .banner {
     max-width: 1200px;
     margin: auto;
   }

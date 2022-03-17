@@ -22,6 +22,65 @@ h3 {
 p {
   font-size: 12px;
 }
+.w-100 {
+  width: 100% !important;
+}
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+}
+.btn-check:focus + .btn-primary,
+.btn-primary:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
 
 header {
   background-color: var(--amarillo);
@@ -50,12 +109,18 @@ header .top-header .form {
   align-items: center;
   padding: 2px;
   font-size: 11px;
+  position: relative;
 }
 header .top-header .form input {
   width: 110px;
-  padding: 4px;
+  padding: 0.5rem;
   border: none;
   border-radius: 3px;
+}
+header .top-header .form i {
+  position: absolute;
+  right: 5px;
+  color: var(--gris-oscuro);
 }
 
 header nav {
@@ -189,6 +254,37 @@ footer p.footer-descripcion {
   margin-top: 4px;
 }
 
+/* Página Register y Login */
+form {
+  margin: 2rem 0;
+}
+.form-group {
+  margin: 1rem 0;
+}
+.form-group label.block {
+  display: block;
+}
+.form-control {
+  margin: 6px 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  /*transition: all 0.3s ease-in;*/
+}
+.form-control:focus {
+  border: 2px solid var(--celeste);
+}
+
+.tipo-usuario {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tipo-usuario input:checked {
+  color: var(--amarillo);
+}
+
 @media (min-width: 361px) {
   main section .products article {
     box-shadow: 0 0 15px rgba(100, 100, 100, 0.424);
@@ -238,8 +334,14 @@ footer p.footer-descripcion {
     gap: 1rem;
   }
 
+  header .top-header .form {
+    width: 100%;
+  }
   header .top-header p {
     text-align: right;
+  }
+  header .top-header .form input {
+    width: 100%;
   }
 
   main section div.products article {

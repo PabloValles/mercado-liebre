@@ -79,7 +79,13 @@
       <form action="home" method="post" id="frm-login">
         <div class="form-control">
           <label for="user">Nombre de usuari@</label>
-          <input type="text" name="user" id="user" class="form-control w-100" />
+          <input
+            type="text"
+            name="user"
+            id="user"
+            class="form-control w-100"
+            required
+          />
           <span class="feedback-user-login"></span>
         </div>
         <div class="form-control">
@@ -89,6 +95,7 @@
             name="pass-user"
             id="pass-user"
             class="form-control w-100"
+            required
           />
           <span class="feedback-pass-user-login"></span>
         </div>

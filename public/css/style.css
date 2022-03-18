@@ -305,7 +305,7 @@ form {
   }
 
   header .top-header .form input {
-    width: auto;
+    width: 80%;
   }
 
   .precios {
@@ -339,9 +339,10 @@ form {
   }
   header .top-header p {
     text-align: right;
+    width: 80%;
   }
   header .top-header .form input {
-    width: 100%;
+    width: 80%;
   }
 
   main section div.products article {

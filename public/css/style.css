@@ -22,6 +22,10 @@ h3 {
 p {
   font-size: 12px;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .w-100 {
   width: 100% !important;
 }
@@ -72,8 +76,8 @@ button:focus:not(:focus-visible) {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+  background-color: #0022aa;
+  border-color: #0022aa;
 }
 
 .btn-secondary {
@@ -81,6 +85,8 @@ button:focus:not(:focus-visible) {
   background-color: #6c757d;
   border-color: #6c757d;
 }
+
+/*===================================================================*/
 
 header {
   background-color: var(--amarillo);
@@ -150,9 +156,13 @@ header .burger-menu button {
   background-color: var(--celeste);
 }
 
+/*===================================================================*/
+
 section.banner img {
   width: 100%;
 }
+
+/*===================================================================*/
 
 main {
   width: 90%;
@@ -166,10 +176,12 @@ main section h3 {
 main section article {
   background-color: #fff;
   margin: 10px 0px;
+  transition: all 0.2s linear;
 }
 
 main section article img {
   width: 100%;
+  padding: 1rem 0;
 }
 
 main section article i,
@@ -199,6 +211,11 @@ main section article i {
   position: absolute;
   right: 20px;
   top: -15px;
+  transition: all 0.2s linear;
+}
+
+main section article:hover i {
+  transform: rotate(-90deg);
 }
 
 .precios {
@@ -213,15 +230,18 @@ main section article i {
 
 .descripciones {
   font-size: 16px;
-  display: none;
-  display: none;
   margin-top: 20px;
+  display: block;
+  opacity: 0;
+  transition: all 0.2s linear;
 }
 
 h3,
 .descripciones {
   color: #666;
 }
+
+/*===================================================================*/
 
 footer {
   background-color: #fff;
@@ -254,6 +274,7 @@ footer p.footer-descripcion {
   margin-top: 4px;
 }
 
+/*===================================================================*/
 /* Página Register y Login */
 form {
   margin: 2rem 0;
@@ -270,6 +291,7 @@ form {
   border-radius: 6px;
   border: none;
   outline: none;
+  background-color: #fff;
   /*transition: all 0.3s ease-in;*/
 }
 .form-control:focus {
@@ -285,9 +307,53 @@ form {
   color: var(--amarillo);
 }
 
+/*===================================================================*/
+
+.menu-mobil {
+  background-color: #fff;
+  position: absolute;
+  height: 100vh;
+  width: 80%;
+  top: 0;
+  left: 0;
+
+  padding: 1rem;
+  border-right: 3px solid var(--gris-oscuro);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  display: none;
+}
+
+.menu-mobil nav {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-mobil nav ul {
+  list-style: none;
+}
+
+.menu-mobil nav ul li {
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+.menu-mobil nav ul li a {
+  text-decoration: none;
+  color: var(--gris-oscuro);
+}
+
 @media (min-width: 361px) {
-  main section .products article {
-    box-shadow: 0 0 15px rgba(100, 100, 100, 0.424);
+  main section .products article:hover {
+    box-shadow: 0 25px 20px 0 rgb(0 0 0 / 16%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
   }
 
   main section div.products {
@@ -300,8 +366,8 @@ form {
     width: 45%;
   }
 
-  main section article .descripciones {
-    display: block;
+  main section article:hover .descripciones {
+    opacity: 1;
   }
 
   header .top-header .form input {
@@ -351,11 +417,28 @@ form {
 }
 
 @media (min-width: 992px) {
+  footer .container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: space-between;
+    width: 100%;
+  }
+
+  footer div {
+    width: 33%;
+    padding: 0 1rem;
+  }
+
+  footer p.copy {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 0.5rem;
+    text-align: left;
+  }
 }
 
 @media (min-width: 1200px) {
   body {
-    max-width: 1200px;
     margin: auto;
   }
 }

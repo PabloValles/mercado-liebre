@@ -260,6 +260,10 @@ footer i {
   font-size: 2em;
   margin: 10px 0;
 }
+
+footer i:hover {
+  color: var(--verde);
+}
 footer p {
   margin: 0;
 }
